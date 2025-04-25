@@ -1,0 +1,35 @@
+service: kanjisama-api
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: ap-northeast-1
+
+functions:
+  queryKanji:
+    handler: handler.queryKanji
+    events:
+      - httpApi:
+          path: /query/{term}/{page}
+          method: get
+          cors: true
+      - httpApi:
+          path: /query//{page}
+          method: get
+          cors: true
+  proxyJisho:
+    handler: handler.proxyJisho
+    events:
+      - httpApi:
+          path: /jisho-proxy/{term}
+          method: get
+          cors: true
+
+package:
+  include:
+    - kanji_data.json
+    - node_modules/**
+
+# Optional plugin for local testing
+plugins:
+  - serverless-offline
