@@ -1,0 +1,18 @@
+{
+  "whyContinueWithGen1": "I find the Gen 1 CLI easier to use",
+  "projectName": "Kanjisama",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "none",
+    "config": {
+      "SourceDir": "frontend",
+      "DistributionDir": "frontend",
+      "BuildCommand": "echo \"No build required\"",
+      "StartCommand": ""
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

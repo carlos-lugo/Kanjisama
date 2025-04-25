@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-kanjisama-dev-ed475-authRole",
+      "UnauthRoleArn": "arn:aws:iam::478424235332:role/amplify-kanjisama-dev-ed475-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::478424235332:role/amplify-kanjisama-dev-ed475-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-kanjisama-dev-ed475-deployment",
+      "UnauthRoleName": "amplify-kanjisama-dev-ed475-unauthRole",
+      "StackName": "amplify-kanjisama-dev-ed475",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:478424235332:stack/amplify-kanjisama-dev-ed475/01e1d790-21c4-11f0-8790-068cb34a339d",
+      "AmplifyAppId": "d1vh2l3vheq2ea"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1vh2l3vheq2ea",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

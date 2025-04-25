@@ -1,9 +1,28 @@
+# backend/serverless.yml
+
 service: kanjisama-api
 
 provider:
   name: aws
   runtime: nodejs22.x
   region: ap-northeast-1
+  profile: amplify-api-user
+
+  # Configure CORS globally for the HTTP API
+  httpApi:
+    cors: true # Enables default CORS settings (allows all origins, common methods/headers)
+    # For more specific CORS configuration later, you can use:
+    # cors:
+    #   allowedOrigins:
+    #     - 'https://your-amplify-domain.com' # Replace with your actual frontend domain
+    #   allowedHeaders:
+    #     - Content-Type
+    #     - Authorization
+    #     # Add other headers as needed
+    #   allowedMethods:
+    #     - GET
+    #   allowCredentials: false
+    #   maxAge: 6000
 
 functions:
   queryKanji:
@@ -12,24 +31,23 @@ functions:
       - httpApi:
           path: /query/{term}/{page}
           method: get
-          cors: true
       - httpApi:
-          path: /query//{page}
+          path: /query/_/{page} # Placeholder for empty term
           method: get
-          cors: true
   proxyJisho:
     handler: handler.proxyJisho
     events:
       - httpApi:
           path: /jisho-proxy/{term}
           method: get
-          cors: true
 
 package:
-  include:
-    - kanji_data.json
-    - node_modules/**
+  patterns:
+    - '!node_modules/**'
+    - 'node_modules/node-fetch/**'
+    - 'handler.js'
+    - 'kanji_data.json'
 
-# Optional plugin for local testing
+# Plugin for local testing
 plugins:
   - serverless-offline
