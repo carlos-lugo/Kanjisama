@@ -6,7 +6,7 @@ provider:
   name: aws
   runtime: nodejs22.x
   region: ap-northeast-1
-  profile: amplify-api-user
+  profile: asdf
 
   # Configure CORS globally for the HTTP API
   httpApi:
@@ -40,13 +40,6 @@ functions:
       - httpApi:
           path: /jisho-proxy/{term}
           method: get
-
-package:
-  patterns:
-    - '!node_modules/**'
-    - 'node_modules/node-fetch/**'
-    - 'handler.js'
-    - 'kanji_data.json'
 
 # Plugin for local testing
 plugins:

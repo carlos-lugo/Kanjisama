@@ -132,9 +132,9 @@ We will use the Amplify CLI to initialize hosting and publish the frontend files
 
 ## Updating the Application
 
-* **Backend Changes:** Modify code in the `backend` directory, then run `cd backend && sls deploy`.
+* **Backend Changes:** Modify code in the `backend` directory, then run `cd backend && sls deploy --verbose`.
 * **Frontend Changes:** Modify code in the `frontend` directory. If you changed `app.js` (like updating the API URL again), make sure it's saved. Then, from the project root, run `amplify publish` again.
-* **Kanji Data Changes:** Replace `backend/kanji_data.json`, then redeploy the backend (`cd backend && sls deploy`). No frontend redeploy is needed unless the API structure changed.
+* **Kanji Data Changes:** Replace `backend/kanji_data.json`, then redeploy the backend (`cd backend && sls deploy --verbose`). No frontend redeploy is needed unless the API structure changed.
 
 ## Removing the Application
 
