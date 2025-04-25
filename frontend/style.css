@@ -1,0 +1,35 @@
+/* frontend/style.css */
+
+/* Basic body padding */
+body {
+    padding-top: 20px;
+  }
+  
+  /* Ensure cursor is pointer for clickable elements */
+  .clickable-kanji,
+  .info-button {
+    cursor: pointer;
+  }
+  
+  /* Add horizontal margin to the page number display */
+  .pagination-controls span.btn {
+    margin: 0 5px;
+  }
+  
+  /* Remove underline from links in Kanji and Palabra Clave columns */
+  #kanji-table-body td:nth-child(2) a, /* Target links in the 2nd column (Kanji) */
+  #kanji-table-body td:nth-child(3) a  /* Target links in the 3rd column (Palabra Clave) */
+  {
+    text-decoration: none;
+  }
+  
+  /* Optional: Add hover effect to indicate they are still clickable */
+  #kanji-table-body td:nth-child(2) a:hover,
+  #kanji-table-body td:nth-child(3) a:hover
+  {
+    text-decoration: underline; /* Show underline on hover */
+    /* Or add another effect like color change */
+    /* color: #0d6efd; */ /* Example: Bootstrap primary blue */
+  }
+  
+  
