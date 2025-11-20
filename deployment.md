@@ -1,3 +1,19 @@
+> **:warning: IMPORTANT DEPLOYMENT NOTICE**
+>
+> The Amplify CLI deployment steps detailed in this guide are currently failing with cryptic errors and are unreliable.
+>
+> **Recommended Manual Deployment:**
+>
+> For a much simpler and more reliable deployment, please follow these steps:
+>
+> 1.  Create a `.zip` archive of the frontend files: `app.js`, `index.html`, and `style.css`.
+> 2.  Go to the **AWS Amplify Console** in your web browser.
+> 3.  Select your application.
+> 4.  In the "Frontend environments" tab, find your hosting environment.
+> 5.  Use the **"Drag and drop to deploy"** feature to upload your `.zip` file.
+>
+> This manual process bypasses the problematic CLI commands and is the recommended way to deploy the frontend.
+
 # Kanjisama Serverless App - Deployment Guide
 
 This guide details the steps to set up and deploy the Kanjisama application, which consists of:

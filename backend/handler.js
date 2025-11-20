@@ -1,7 +1,7 @@
 'use strict';
 
 // Load the Kanji data - Node.js caches this after first load
-const kanjiData = require('./kanji_data.json');
+const kanjiData = require('./kanji_data_v2.json');
 const fetch = require('node-fetch');
 
 const ITEMS_PER_PAGE = 20;

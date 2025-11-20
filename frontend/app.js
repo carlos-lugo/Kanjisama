@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       console.error("Error fetching Kanji data:", error);
       mensajeStatus.textContent = `Error al buscar: ${error.message}`;
-      resultsTableBody.innerHTML = '<tr><td colspan="5" class="text-danger">Error al cargar datos.</td></tr>';
+      resultsTableBody.innerHTML = '<tr><td colspan="7" class="text-danger">Error al cargar datos.</td></tr>';
       updatePaginationControls(0, false, 0); // Reset pagination on error
     }
   }
@@ -140,6 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .filter(c => c) // Filter out empty/null components
         .join(', ');
       compCell.textContent = componentes;
+
+      // Ejemplo
+      row.insertCell().textContent = entry.ejemplo || '';
+
+      // Lectura
+      row.insertCell().textContent = entry.lectura || '';
 
       // Extra Info Button
       const extraCell = row.insertCell();

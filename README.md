@@ -103,7 +103,7 @@ kanjisama-app/
     * You can serve the `frontend` directory using a simple local HTTP server (like `npx serve frontend/`) or VS Code's Live Server extension.
     * Ensure the frontend calls the correct local backend URL (`http://localhost:3000`).
 
-## Deployment
+## Deployment SEE THE DEPLOYMENT GUIDE
 
 1.  **Deploy Backend:**
     * Navigate to the backend directory:
